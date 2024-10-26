@@ -47,6 +47,9 @@ audio {
 .waveform {
     width: 100%;
     height: 100px;
+    max-height: 200px; /* Limits height for better layout */
+    margin-top: 10px;
+    border: 1px solid #ccc;
     background-color: #e0e0e0;
     margin-bottom: 5px; /* Reduced space between waveform and spectrogram */
 }
