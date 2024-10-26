@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech Enhancement Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+</head>
+<body>
+
+    <h1>Speech Enhancement Demo</h1>
+
+    <!-- Introductory Text -->
+    <p class="intro-text">
+        A speech enhancement (SE) model effectively addresses diverse distortions—including additive noise, reverberation, clipping, and bandwidth limitations—across a full range of supported sampling frequencies (4 kHz to 48 kHz).
+    </p>
+
+    <!-- Additive Noise Section -->
+    <section id="additive-noise">
+        <h2>1. Additive Noise</h2>
+        <div class="sample-container">
+            <!-- fileid_13 -->
+            <div class="sample">
+                <h3>Noisy Sample (fileid_13)</h3>
+                <audio controls>
+                    <source src="9_noisy/fileid_13.flac" type="audio/flac">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-13-noisy"></div>
+                <img src="images/fileid_13_noisy_spectrogram.png" alt="Noisy Spectrogram">
+            </div>
+            <div class="sample">
+                <h3>Enhanced Sample (fileid_13)</h3>
+                <audio controls>
+                    <source src="1_Additive Noise/fileid_13.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-13-enhanced"></div>
+                <img src="images/fileid_13_enhanced_spectrogram.png" alt="Enhanced Spectrogram">
+            </div>
+
+            <!-- fileid_14 -->
+            <div class="sample">
+                <h3>Noisy Sample (fileid_14)</h3>
+                <audio controls>
+                    <source src="9_noisy/fileid_14.flac" type="audio/flac">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-14-noisy"></div>
+                <img src="images/fileid_14_noisy_spectrogram.png" alt="Noisy Spectrogram">
+            </div>
+            <div class="sample">
+                <h3>Enhanced Sample (fileid_14)</h3>
+                <audio controls>
+                    <source src="1_Additive Noise/fileid_14.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-14-enhanced"></div>
+                <img src="images/fileid_14_enhanced_spectrogram.png" alt="Enhanced Spectrogram">
+            </div>
+
+            <!-- fileid_17 -->
+            <div class="sample">
+                <h3>Noisy Sample (fileid_17)</h3>
+                <audio controls>
+                    <source src="9_noisy/fileid_17.flac" type="audio/flac">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-17-noisy"></div>
+                <img src="images/fileid_17_noisy_spectrogram.png" alt="Noisy Spectrogram">
+            </div>
+            <div class="sample">
+                <h3>Enhanced Sample (fileid_17)</h3>
+                <audio controls>
+                    <source src="1_Additive Noise/fileid_17.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-17-enhanced"></div>
+                <img src="images/fileid_17_enhanced_spectrogram.png" alt="Enhanced Spectrogram">
+            </div>
+
+            <!-- fileid_20 -->
+            <div class="sample">
+                <h3>Noisy Sample (fileid_20)</h3>
+                <audio controls>
+                    <source src="9_noisy/fileid_20.flac" type="audio/flac">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-20-noisy"></div>
+                <img src="images/fileid_20_noisy_spectrogram.png" alt="Noisy Spectrogram">
+            </div>
+            <div class="sample">
+                <h3>Enhanced Sample (fileid_20)</h3>
+                <audio controls>
+                    <source src="1_Additive Noise/fileid_20.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-20-enhanced"></div>
+                <img src="images/fileid_20_enhanced_spectrogram.png" alt="Enhanced Spectrogram">
+            </div>
+
+            <!-- fileid_549 -->
+            <div class="sample">
+                <h3>Noisy Sample (fileid_549)</h3>
+                <audio controls>
+                    <source src="9_noisy/fileid_549.flac" type="audio/flac">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-549-noisy"></div>
+                <img src="images/fileid_549_noisy_spectrogram.png" alt="Noisy Spectrogram">
+            </div>
+            <div class="sample">
+                <h3>Enhanced Sample (fileid_549)</h3>
+                <audio controls>
+                    <source src="1_Additive Noise/fileid_549.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-549-enhanced"></div>
+                <img src="images/fileid_549_enhanced_spectrogram.png" alt="Enhanced Spectrogram">
+            </div>
+
+            <!-- fileid_690 -->
+            <div class="sample">
+                <h3>Noisy Sample (fileid_690)</h3>
+                <audio controls>
+                    <source src="9_noisy/fileid_690.flac" type="audio/flac">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-690-noisy"></div>
+                <img src="images/fileid_690_noisy_spectrogram.png" alt="Noisy Spectrogram">
+            </div>
+            <div class="sample">
+                <h3>Enhanced Sample (fileid_690)</h3>
+                <audio controls>
+                    <source src="1_Additive Noise/fileid_690.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-690-enhanced"></div>
+                <img src="images/fileid_690_enhanced_spectrogram.png" alt="Enhanced Spectrogram">
+            </div>
+
+            <!-- fileid_834 -->
+            <div class="sample">
+                <h3>Noisy Sample (fileid_834)</h3>
+                <audio controls>
+                    <source src="9_noisy/fileid_834.flac" type="audio/flac">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-834-noisy"></div>
+                <img src="images/fileid_834_noisy_spectrogram.png" alt="Noisy Spectrogram">
+            </div>
+            <div class="sample">
+                <h3>Enhanced Sample (fileid_834)</h3>
+                <audio controls>
+                    <source src="1_Additive Noise/fileid_834.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-834-enhanced"></div>
+                <img src="images/fileid_834_enhanced_spectrogram.png" alt="Enhanced Spectrogram">
+            </div>
+
+            <!-- fileid_975 -->
+            <div class="sample">
+                <h3>Noisy Sample (fileid_975)</h3>
+                <audio controls>
+                    <source src="9_noisy/fileid_975.flac" type="audio/flac">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-975-noisy"></div>
+                <img src="images/fileid_975_noisy_spectrogram.png" alt="Noisy Spectrogram">
+            </div>
+            <div class="sample">
+                <h3>Enhanced Sample (fileid_975)</h3>
+                <audio controls>
+                    <source src="1_Additive Noise/fileid_975.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-975-enhanced"></div>
+                <img src="images/fileid_975_enhanced_spectrogram.png" alt="Enhanced Spectrogram">
+            </div>
+        </div>
+    </section>
+
+    <!-- Clipping Section -->
+    <section id="clipping">
+        <h2>2. Clipping</h2>
+        <div class="sample-container">
+            <!-- fileid_28 -->
+            <div class="sample">
+                <h3>Noisy Sample (fileid_28)</h3>
+                <audio controls>
+                    <source src="9_noisy/fileid_28.flac" type="audio/flac">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-28-noisy"></div>
+                <img src="images/fileid_28_noisy_spectrogram.png" alt="Noisy Spectrogram">
+            </div>
+            <div class="sample">
+                <h3>Enhanced Sample (fileid_28)</h3>
+                <audio controls>
+                    <source src="2_Clipping/fileid_28.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-28-enhanced"></div>
+                <img src="images/fileid_28_enhanced_spectrogram.png" alt="Enhanced Spectrogram">
+            </div>
+
+            <!-- fileid_45 -->
+            <div class="sample">
+                <h3>Noisy Sample (fileid_45)</h3>
+                <audio controls>
+                    <source src="9_noisy/fileid_45.flac" type="audio/flac">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-45-noisy"></div>
+                <img src="images/fileid_45_noisy_spectrogram.png" alt="Noisy Spectrogram">
+            </div>
+            <div class="sample">
+                <h3>Enhanced Sample (fileid_45)</h3>
+                <audio controls>
+                    <source src="2_Clipping/fileid_45.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-45-enhanced"></div>
+                <img src="images/fileid_45_enhanced_spectrogram.png" alt="Enhanced Spectrogram">
+            </div>
+
+            <!-- fileid_646 -->
+            <div class="sample">
+                <h3>Noisy Sample (fileid_646)</h3>
+                <audio controls>
+                    <source src="9_noisy/fileid_646.flac" type="audio/flac">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-646-noisy"></div>
+                <img src="images/fileid_646_noisy_spectrogram.png" alt="Noisy Spectrogram">
+            </div>
+            <div class="sample">
+                <h3>Enhanced Sample (fileid_646)</h3>
+                <audio controls>
+                    <source src="2_Clipping/fileid_646.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-646-enhanced"></div>
+                <img src="images/fileid_646_enhanced_spectrogram.png" alt="Enhanced Spectrogram">
+            </div>
+
+            <!-- fileid_735 -->
+            <div class="sample">
+                <h3>Noisy Sample (fileid_735)</h3>
+                <audio controls>
+                    <source src="9_noisy/fileid_735.flac" type="audio/flac">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-735-noisy"></div>
+                <img src="images/fileid_735_noisy_spectrogram.png" alt="Noisy Spectrogram">
+            </div>
+            <div class="sample">
+                <h3>Enhanced Sample (fileid_735)</h3>
+                <audio controls>
+                    <source src="2_Clipping/fileid_735.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-735-enhanced"></div>
+                <img src="images/fileid_735_enhanced_spectrogram.png" alt="Enhanced Spectrogram">
+            </div>
+
+            <!-- fileid_986 -->
+            <div class="sample">
+                <h3>Noisy Sample (fileid_986)</h3>
+                <audio controls>
+                    <source src="9_noisy/fileid_986.flac" type="audio/flac">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-986-noisy"></div>
+                <img src="images/fileid_986_noisy_spectrogram.png" alt="Noisy Spectrogram">
+            </div>
+            <div class="sample">
+                <h3>Enhanced Sample (fileid_986)</h3>
+                <audio controls>
+                    <source src="2_Clipping/fileid_986.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-986-enhanced"></div>
+                <img src="images/fileid_986_enhanced_spectrogram.png" alt="Enhanced Spectrogram">
+            </div>
+        </div>
+    </section>
+
+    <!-- Reverberation Section -->
+    <section id="reverberation">
+        <h2>3. Reverberation</h2>
+        <div class="sample-container">
+            <!-- fileid_22 -->
+            <div class="sample">
+                <h3>Noisy Sample (fileid_22)</h3>
+                <audio controls>
+                    <source src="9_noisy/fileid_22.flac" type="audio/flac">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-22-noisy"></div>
+                <img src="images/fileid_22_noisy_spectrogram.png" alt="Noisy Spectrogram">
+            </div>
+            <div class="sample">
+                <h3>Enhanced Sample (fileid_22)</h3>
+                <audio controls>
+                    <source src="3_Reverberation/fileid_22.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-22-enhanced"></div>
+                <img src="images/fileid_22_enhanced_spectrogram.png" alt="Enhanced Spectrogram">
+            </div>
+
+            <!-- fileid_843 -->
+            <div class="sample">
+                <h3>Noisy Sample (fileid_843)</h3>
+                <audio controls>
+                    <source src="9_noisy/fileid_843.flac" type="audio/flac">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-843-noisy"></div>
+                <img src="images/fileid_843_noisy_spectrogram.png" alt="Noisy Spectrogram">
+            </div>
+            <div class="sample">
+                <h3>Enhanced Sample (fileid_843)</h3>
+                <audio controls>
+                    <source src="3_Reverberation/fileid_843.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-843-enhanced"></div>
+                <img src="images/fileid_843_enhanced_spectrogram.png" alt="Enhanced Spectrogram">
+            </div>
+
+            <!-- fileid_995 -->
+            <div class="sample">
+                <h3>Noisy Sample (fileid_995)</h3>
+                <audio controls>
+                    <source src="9_noisy/fileid_995.flac" type="audio/flac">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-995-noisy"></div>
+                <img src="images/fileid_995_noisy_spectrogram.png" alt="Noisy Spectrogram">
+            </div>
+            <div class="sample">
+                <h3>Enhanced Sample (fileid_995)</h3>
+                <audio controls>
+                    <source src="3_Reverberation/fileid_995.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-995-enhanced"></div>
+                <img src="images/fileid_995_enhanced_spectrogram.png" alt="Enhanced Spectrogram">
+            </div>
+
+            <!-- fileid_999 -->
+            <div class="sample">
+                <h3>Noisy Sample (fileid_999)</h3>
+                <audio controls>
+                    <source src="9_noisy/fileid_999.flac" type="audio/flac">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-999-noisy"></div>
+                <img src="images/fileid_999_noisy_spectrogram.png" alt="Noisy Spectrogram">
+            </div>
+            <div class="sample">
+                <h3>Enhanced Sample (fileid_999)</h3>
+                <audio controls>
+                    <source src="3_Reverberation/fileid_999.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-999-enhanced"></div>
+                <img src="images/fileid_999_enhanced_spectrogram.png" alt="Enhanced Spectrogram">
+            </div>
+        </div>
+    </section>
+
+    <!-- Bandwidth Limitation Section -->
+    <section id="bandwidth-limitation">
+        <h2>4. Bandwidth Limitation</h2>
+        <div class="sample-container">
+            <!-- fileid_3 -->
+            <div class="sample">
+                <h3>Noisy Sample (fileid_3)</h3>
+                <audio controls>
+                    <source src="9_noisy/fileid_3.flac" type="audio/flac">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-3-noisy"></div>
+                <img src="images/fileid_3_noisy_spectrogram.png" alt="Noisy Spectrogram">
+            </div>
+            <div class="sample">
+                <h3>Enhanced Sample (fileid_3)</h3>
+                <audio controls>
+                    <source src="4_BWLimitation/fileid_3.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-3-enhanced"></div>
+                <img src="images/fileid_3_enhanced_spectrogram.png" alt="Enhanced Spectrogram">
+            </div>
+
+            <!-- fileid_21 -->
+            <div class="sample">
+                <h3>Noisy Sample (fileid_21)</h3>
+                <audio controls>
+                    <source src="9_noisy/fileid_21.flac" type="audio/flac">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-21-noisy"></div>
+                <img src="images/fileid_21_noisy_spectrogram.png" alt="Noisy Spectrogram">
+            </div>
+            <div class="sample">
+                <h3>Enhanced Sample (fileid_21)</h3>
+                <audio controls>
+                    <source src="4_BWLimitation/fileid_21.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-21-enhanced"></div>
+                <img src="images/fileid_21_enhanced_spectrogram.png" alt="Enhanced Spectrogram">
+            </div>
+
+            <!-- fileid_92 -->
+            <div class="sample">
+                <h3>Noisy Sample (fileid_92)</h3>
+                <audio controls>
+                    <source src="9_noisy/fileid_92.flac" type="audio/flac">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-92-noisy"></div>
+                <img src="images/fileid_92_noisy_spectrogram.png" alt="Noisy Spectrogram">
+            </div>
+            <div class="sample">
+                <h3>Enhanced Sample (fileid_92)</h3>
+                <audio controls>
+                    <source src="4_BWLimitation/fileid_92.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-92-enhanced"></div>
+                <img src="images/fileid_92_enhanced_spectrogram.png" alt="Enhanced Spectrogram">
+            </div>
+
+            <!-- fileid_841 -->
+            <div class="sample">
+                <h3>Noisy Sample (fileid_841)</h3>
+                <audio controls>
+                    <source src="9_noisy/fileid_841.flac" type="audio/flac">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-841-noisy"></div>
+                <img src="images/fileid_841_noisy_spectrogram.png" alt="Noisy Spectrogram">
+            </div>
+            <div class="sample">
+                <h3>Enhanced Sample (fileid_841)</h3>
+                <audio controls>
+                    <source src="4_BWLimitation/fileid_841.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="waveform-fileid-841-enhanced"></div>
+                <img src="images/fileid_841_enhanced_spectrogram.png" alt="Enhanced Spectrogram">
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
